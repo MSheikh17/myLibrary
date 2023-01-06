@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 90vw;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #d1d5db;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "side-bar header""side-bar main-content"
+}
+
+.header {
+    grid-area: header;
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+}
+
+.side-bar {
+    grid-area: side-bar;
+    background-color: aqua;
+}
+
+.side-bar>h3 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form>div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.form>div>label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+    width: 300px;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: azure;
+    padding: 20px;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 5px;
+}
+
+.book {
+    background-color: white;
+    padding: 22px;
+    border-radius: 10px;
+    border: 5px solid #fcd34d;
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    width: 300px;
+    padding: 5px;
+}
+
+button {
+    padding: 5px;
+    width: 200px;
+    background-color: #fcd34d;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#add-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.removeButton {
+    padding: 5px;
+    width: 120px;
+    background-color: #fcd34d;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.readOrNot {
+    padding: 5px;
+    width: 80px;
+    background-color: chocolate;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
